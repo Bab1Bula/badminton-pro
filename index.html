@@ -12,7 +12,6 @@
     <title>羽球 Pro</title>
     
     <link rel="manifest" href="manifest.json">
-    
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2646/2646434.png">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2646/2646434.png">
 
@@ -24,7 +23,6 @@
             color: white; display: flex; flex-direction: column; overflow: hidden;
         }
 
-        /* 顶部大比分板 (局数) */
         .scoreboard {
             height: 70px; background: rgba(0,0,0,0.3); backdrop-filter: blur(10px);
             display: flex; justify-content: center; align-items: center;
@@ -34,7 +32,6 @@
         .set-score { color: #f59e0b; font-size: 28px; margin: 0 15px; font-weight: 800; }
         .player-name-top { opacity: 0.8; font-size: 18px; }
         
-        /* 比赛计分区域 */
         .court { display: flex; flex: 1; width: 100%; position: relative; }
         .court::after {
             content: ''; position: absolute; top: 20px; bottom: 20px; left: 50%;
@@ -52,14 +49,12 @@
         .name { font-size: 24px; margin-bottom: 15px; color: #94a3b8; font-weight: 500; }
         .score { font-size: 120px; font-weight: 800; line-height: 1; text-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: all 0.2s; }
         
-        /* 发球权指示灯 */
         .serve-indicator {
             width: 12px; height: 12px; background-color: #10b981;
             border-radius: 50%; margin-top: 25px; opacity: 0.1; transition: all 0.3s ease;
         }
         .has-serve .serve-indicator { opacity: 1; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); transform: scale(1.2); }
 
-        /* 底部控制面板 */
         .controls-panel {
             background: rgba(30, 41, 59, 0.8); backdrop-filter: blur(20px);
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -81,7 +76,6 @@
         .btn-undo { color: #e2e8f0; }
         .btn-reset { color: #ef4444; background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.2); }
 
-        /* 弹窗提醒 */
         #modal {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.8); backdrop-filter: blur(8px);
@@ -106,7 +100,7 @@
 
     <div id="modal">
         <div class="modal-content">
-            <h2 id="modal-title">Castor 胜出本局!</h2>
+            <h2 id="modal-title">胜出本局!</h2>
             <p id="modal-desc">准备下一局比赛</p>
             <button onclick="handleModalClick()" id="modal-btn">继续比赛</button>
         </div>
